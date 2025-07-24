@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/../images/Icono.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style_Globales.css">
+    <link rel="stylesheet" href="../css/style_Header.css">
+    <link rel="stylesheet" href="../css/style_Navigation.css">
+    <link rel="stylesheet" href="../css/style_Contactenos.css">
+    <link rel="stylesheet" href="../css/style_destinos.css">
+    <link rel="stylesheet" href="../css/style_Footer.css">
+    <link rel="stylesheet" href="../css/style_Audio.css">
+    <link rel="stylesheet" href="../css/header-anim.css">
+    <link rel="stylesheet" href="../../css/IDIOMA.css">
+    <link rel="ico" href="Vahit.ico">
+    <title>Trujillo - Transportes Chasqui S. A.</title>
+
+</head>
+
+<body>
+    <header id="main-header">
+        <div class="container">
+            <div class="logo-container">
+                <a href="../index.html">
+                    <img src="../images/logo.png" alt="Logo Transportes Chasqui" class="logo">
+                </a>
+                <div class="title-container">
+                    <h1>Transportes Chasqui S.A.</h1>
+                    <p class="slogan">¡Más rápido, más seguro!</p>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li class="has-submenu">
+                        <a href="../html/servicios.html">SERVICIOS</a>
+                        <ul class="submenu">
+                            <li><a href="../html/servicios/carga_pesadas.html"><i class="fas fa-dolly-flatbed"></i>
+                                    Carga Pesada</a></li>
+                            <li><a href="../html/servicios/internacional.html"><i class="fas fa-globe-americas"></i>
+                                    Internacional</a></li>
+                            <li><a href="../html/servicios/mudanzas.html"><i class="fas fa-truck-moving"></i>
+                                    Mudanzas</a></li>
+                            <li><a href="../html/servicios/mercancias_peligrosas.html"><i
+                                        class="fas fa-exclamation-triangle"></i> Mercancías Peligrosas</a></li>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../html/destinos.html" >DESTINOS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="destinos-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Destino</h2>
+                    <div class="title-underline"></div>
+                    <p class="section-description">Descripción del destino</p>
+                </div>
+
+                <div class="destinos-grid">
+                    <div class="destino-card">
+                        <div class="destino-image">
+                            <img src="" alt="Imagen del destino">
+                            <div class="destino-price"><span></span></div>
+                        </div>
+
+                        <div class="destino-content">
+                            <h3></h3>
+                            <p></p>
+
+                            <div class="destino-features">
+                                <div class="feature">
+                                    <i class="fas fa-clock"></i>
+                                    <span></span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span>Salidas diarias</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Servicio directo</span>
+                                </div>
+                            </div>
+
+                            <div class="contacto-container" id="reserva-container">
+                                <!--Informacion de horario del destino-->
+                                <div class="info-destino-card servicio-card"
+                                    style="flex:1; min-width:220px; background: #f8fafc; border: 2px solid #1976d2; border-radius: 14px; box-shadow: 0 2px 12px 0 rgba(25, 118, 210, 0.08); padding: 24px 18px; margin-bottom: 0;">
+                                    <div id="info-destino" style="margin:0;"></div>
+                                    <!-- Mapa de ubicación -->
+                                    <div class="mapa-ubicacion">
+                                        <iframe
+                                            id="iframe-mapa"
+                                            class="iframe-mapa"
+                                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <p class="texto-mapa">Ver ubicación de la terminal</p>
+                                    </div>
+                                </div>
+                                <!--COntenedor de Contacto-->
+                                <div class="contacto-form" style="flex:2;">
+                                    <div class="form-header">
+                                        <h3>Reserva el viaje de tu paquete a Trujillo</h3>
+                                        <p>Completa el formulario para el envio del paquete. Recibirás confirmación por correo electrónico.</p>
+                                    </div>
+                                    <form id="reservaFormTrujillo" action="../php/reserva.php" method="POST">
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre completo <span class="required">*</span></label>
+                                            <div class="input-wrapper">
+                                                <i class="fas fa-user"></i>
+                                                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Correo electrónico <span class="required">*</span></label>
+                                            <div class="input-wrapper">
+                                                <i class="fas fa-envelope"></i>
+                                                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="telefono">Teléfono</label>
+                                            <div class="input-wrapper">
+                                                <i class="fas fa-phone"></i>
+                                                <input type="tel" id="telefono" name="telefono" placeholder="999-999-999">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="fecha">Fecha de viaje <span class="required">*</span></label>
+                                            <div class="input-wrapper">
+                                                <i class="fas fa-calendar-alt"></i>
+                                                <input type="date" id="fecha" name="fecha" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="hora">Hora de salida <span class="required">*</span></label>
+                                            <div class="input-wrapper">
+                                                <i class="fas fa-clock"></i>
+                                                <select id="hora" name="hora" required>
+                                                    <option value="">Seleccione una hora</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group checkbox-group">
+                                            <input type="checkbox" id="terminos" name="terminos" required>
+                                            <label for="terminos">Acepto recibir confirmación de mi reserva por correo electrónico <span class="required">*</span></label>
+                                        </div>
+                                        <div class="form-actions">
+                                            <button type="reset" class="btn-secondary">Limpiar</button>
+                                            <button type="submit" class="btn-primary">Reservar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destinos-cta">
+                    <p>¿Quieres más información?</p>
+                    <a href="../html/footer/contactenos.html" class="btn">Consulta disponibilidad</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <div id="footer-placeholder"></div>
+        <!--footer-->
+        <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="../html/footer/Libro de reclamaciones.html">Libro de Reclamaciones</a></li>
+                        <li><a href="../html/footer/contactenos.html">Contáctenos</a></li>
+                        <li><a href="../html/footer/acerca.html">Acerca de</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Trujillo</p>
+                    <p><i class="fas fa-phone"></i> (+51) 912 345 678</p>
+                    <p><i class="fas fa-envelope"></i> juanjosecastilloroman@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61575975725725" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VbAHyMUKbYMW8V73Op2J" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/Vanir021/Transportes_Chasqui-S.A" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Transportes Chasqui S.A. - Proyecto de Taller de Programación Web - Sección 20342</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/destinosData.js"></script>
+    <script>
+        function obtenerParametroDestino() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('destino');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const destinoNombre = obtenerParametroDestino();
+            const destino = destinosData.find(d => d.nombre === destinoNombre);
+
+            if (destino) {
+                document.querySelector('.section-title').textContent = `Destino: ${destino.nombre}`;
+                document.querySelector('.section-description').textContent = destino.descripcion;
+                document.querySelector('.destino-image img').src = destino.imagen;
+                document.querySelector('.destino-image img').alt = `Imagen de ${destino.nombre}`;
+                document.querySelector('.destino-price span').textContent = destino.precio;
+                document.querySelector('.destino-content h3').textContent = destino.nombre;
+                document.querySelector('.destino-content p').textContent = destino.descripcion;
+                document.querySelector('.fa-clock + span').textContent = destino.duracion;
+                document.querySelector('.form-header h3').textContent = `Reserva el viaje de tu paquete a ${destino.nombre}`;
+
+                // Llenar horarios
+                const selectHora = document.getElementById('hora');
+                destino.horarios.forEach(h => {
+                    const opt = document.createElement('option');
+                    opt.value = h;
+                    opt.textContent = h;
+                    selectHora.appendChild(opt);
+                });
+
+                // Info extra
+                document.getElementById('info-destino').innerHTML = `
+                <p><strong>Precio:</strong> ${destino.precio}</p>
+                <p><strong>Horarios disponibles:</strong></p>
+                <ul>${destino.horarios.map(h => `<li>${h}</li>`).join('')}</ul>
+        `;
+
+                // Mapa dinámico
+                if(destino.mapa) {
+                    document.getElementById('iframe-mapa').src = destino.mapa;
+                } else {
+                    document.getElementById('iframe-mapa').src = '';
+                }
+            }
+        });
+    </script>
+    <script src="../js/header-anim.js"></script>
+    <style>
+.mapa-ubicacion {
+    width: 100%;
+    margin-top: 18px;
+}
+.iframe-mapa {
+    width: 100%;
+    height: 500px;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+    max-width: 100%;
+}
+.texto-mapa {
+    font-size: 0.95em;
+    color: #1976d2;
+    margin-top: 4px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .iframe-mapa {
+        height: 160px;
+    }
+}
+</style>
+</body>
+
+</html>

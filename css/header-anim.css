@@ -1,0 +1,13 @@
+#main-header {
+    transition: opacity 0.5s, transform 0.5s;
+}
+#main-header.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-100%);
+}
+#main-header.fade-in {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}

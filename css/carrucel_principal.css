@@ -1,0 +1,122 @@
+body {
+    background: #ededed;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.carrusel-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #ededed;
+    box-sizing: border-box;
+}
+
+.carrusel-title {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.carrusel-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #ff8000;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+}
+
+.carrusel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s;
+}
+
+.carrusel-item {
+    min-width: 240px;
+    max-width: 240px;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+}
+
+.carrusel-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 12px 8px 12px;
+    letter-spacing: 1px;
+}
+
+.carrusel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #ff8000;
+    z-index: 2;
+    transition: background 0.2s;
+}
+
+.carrusel-arrow:hover {
+    background: #ff8000;
+    color: #fff;
+}
+
+.carrusel-arrow.left {
+    left: 0;
+}
+
+.carrusel-arrow.right {
+    right: 0;
+}
+
+@media (max-width: 900px) {
+    .carrusel-item {
+        min-width: 180px;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrusel-item {
+        min-width: 140px;
+        max-width: 140px;
+    }
+
+    .carrusel-title {
+        font-size: 1rem;
+    }
+}

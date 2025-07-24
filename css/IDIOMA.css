@@ -1,0 +1,109 @@
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botón flotante de idioma */
+.lang-float-btn {
+    position: fixed;
+    left: 1340px;
+    bottom: 620px;
+    z-index: 99999 !important;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.13);
+    padding: 4px 12px;
+    display: flex;
+    gap: 8px;
+    transition: box-shadow 0.2s;
+    border: 1px solid #e0e0e0;
+    cursor: pointer;
+    min-width: 64px;
+    height: 41.7px;
+    overflow: visible !important;
+}
+
+.lang-float-btn:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.lang-toggle-label {
+    display: flex;
+    align-items: center;
+    background: #e2e2e2;
+    border-radius: 20px;
+    padding: 2px 8px;
+    cursor: pointer;
+    position: relative;
+    min-width: 64px;
+    height: 32px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    transition: background 0.2s;
+}
+
+.lang-slider {
+    width: 45px;
+    height: 28px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    transition: left 0.25s;
+    z-index: 1;
+}
+
+#lang-toggle:checked+.lang-toggle-label .lang-slider {
+    left: 35px;
+}
+
+.flag {
+    width: 22px;
+    height: 20px;
+    display: inline-block;
+    background-size: cover;
+    margin: 0 6px;
+    z-index: 2;
+}
+
+.flag-es {
+    background-image: url('https://flagcdn.com/es.svg');
+}
+
+.flag-en {
+    background-image: url('https://flagcdn.com/us.svg');
+}
+
+@media (max-width: 600px) {
+    .lang-float-btn {
+        left: 8px;
+        bottom: 8px;
+        min-width: 44px;
+        height: 32px;
+        padding: 2px 4px;
+    }
+
+    .lang-toggle-label {
+        min-width: 44px;
+        height: 28px;
+    }
+
+    .lang-slider {
+        width: 20px;
+        height: 16px;
+        left: 2px;
+        top: 2px;
+    }
+
+    #lang-toggle:checked+.lang-toggle-label .lang-slider {
+        left: 18px;
+    }
+
+    .flag {
+        width: 16px;
+        height: 12px;
+        margin: 0 2px;
+    }
+}
